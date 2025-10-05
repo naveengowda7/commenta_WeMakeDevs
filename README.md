@@ -4,6 +4,21 @@
 
 ---
 
+
+## 🎥 Demo Video
+
+Watch our project demonstration:
+
+[![Commenta Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+*Click the image above to watch the full demo on YouTube*
+
+Or watch directly: [https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+---
+
+- **backend** - [github.com/team/commenta-backend](https://github.com/naveengowda7/commenta_backend)
+
 ## 🎯 Project Overview
 
 Commenta is an intelligent comment analytics platform built to help YouTube content creators gain deep insights from their video comments. Using AI-powered sentiment analysis and a conversational AI agent, creators can understand viewer sentiment, identify trends, spot controversial topics, and engage with their community more effectively.
