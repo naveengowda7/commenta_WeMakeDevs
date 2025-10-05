@@ -13,7 +13,7 @@ Watch our project demonstration:
 
 *Click the image above to watch the full demo on YouTube*
 
-Or watch directly: [https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://www.youtube.com/watch?v=XNeTzrOe6lY)
+Or watch directly: [https://www.youtube.com/watch?v=XNeTzrOe6lY](https://www.youtube.com/watch?v=XNeTzrOe6lY)
 
 ---
 
