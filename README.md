@@ -9,7 +9,7 @@
 
 Watch our project demonstration:
 
-[![Commenta Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Commenta Demo Video](https://img.youtube.com/vi/XNeTzrOe6lY/maxresdefault.jpg)](https://www.youtube.com/watch?v=XNeTzrOe6lY&feature=youtu.be)
 
 *Click the image above to watch the full demo on YouTube*
 
