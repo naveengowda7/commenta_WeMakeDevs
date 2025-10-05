@@ -8,6 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import React from "react";
+const AUTH_URL = import.meta.env.VITE_AUTH_URL;
 
 const LandingPage = () => {
   const { user } = useAuth();
@@ -18,7 +19,7 @@ const LandingPage = () => {
   }
 
   const handleLogin = () => {
-    window.location.href = "http://localhost:4000/auth/login";
+    window.location.href = `${AUTH_URL}/auth/login`;
   };
 
   return (
