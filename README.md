@@ -147,7 +147,7 @@ The AI Agent (Port 4003) receives the request.
 3. Cerebras AI Tool Invocation
 The AI Agent sends the query to Cerebras AI, which responds with:
 
-json
+```
 {
   "tool_calls": [{
     "function": {
@@ -159,20 +159,23 @@ json
     }
   }]
 }
+```
 4. MCP Gateway Request
 The AI Agent calls the MCP Gateway (Port 5001) with:
-
+```
 http
 POST /tools/get_top_comments
 Body: {
   "videoId": "abc123",
   "type": "controversial"
 }
+```
 5. Database Query
 MCP Gateway forwards the request to DB Ops Service (Port 5000):
-
+```
 http
 GET /analysis/video/abc123
+```
 6. Data Retrieval & Filtering
 DB Ops Service fetches analysis data from PostgreSQL.
 
