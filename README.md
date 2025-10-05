@@ -138,43 +138,54 @@ Commenta follows a **microservices architecture** with 6 independent services:
 The **MCP (Model Context Protocol) Gateway** is the bridge between the AI Agent and your database. Here's the detailed flow:
 
 ### Step-by-Step MCP Flow
-```
-User asks: "Show me the most controversial comments"
-↓
-AI Agent (Port 4003) receives query
-↓
-AI Agent sends query to Cerebras AI with available tools
-↓
-Cerebras AI analyzes and responds:
+1. User Interaction
+The user types: "Show me the most controversial comments"
+
+2. AI Agent Receives the Query
+The AI Agent (Port 4003) receives the request.
+
+3. Cerebras AI Tool Invocation
+The AI Agent sends the query to Cerebras AI, which responds with:
+
+json
 {
-"tool_calls": [{
-"function": {
-"name": "get_top_comments",
-"arguments": {"videoId": "abc123", "type": "controversial"}
+  "tool_calls": [{
+    "function": {
+      "name": "get_top_comments",
+      "arguments": {
+        "videoId": "abc123",
+        "type": "controversial"
+      }
+    }
+  }]
 }
-}]
-}
-↓
-AI Agent calls MCP Gateway (Port 5001)
+4. MCP Gateway Request
+The AI Agent calls the MCP Gateway (Port 5001) with:
+
+http
 POST /tools/get_top_comments
-Body: {"videoId": "abc123", "type": "controversial"}
-↓
-MCP Gateway calls DB Ops Service (Port 5000)
+Body: {
+  "videoId": "abc123",
+  "type": "controversial"
+}
+5. Database Query
+MCP Gateway forwards the request to DB Ops Service (Port 5000):
+
+http
 GET /analysis/video/abc123
-↓
-DB Ops returns analysis data from PostgreSQL
-↓
-MCP Gateway filters controversial comments
-↓
-MCP Gateway returns filtered results to AI Agent
-↓
-AI Agent sends results back to Cerebras AI
-↓
-Cerebras AI generates human-friendly response:
-"I found 15 controversial comments. The top one is..."
-↓
-Response sent to Frontend
-```
+6. Data Retrieval & Filtering
+DB Ops Service fetches analysis data from PostgreSQL.
+
+MCP Gateway filters for controversial comments.
+
+7. Return to AI Agent
+MCP Gateway sends the filtered results back to the AI Agent.
+
+8. Cerebras AI Formats Response
+Cerebras AI generates a human-friendly message:
+
+9. Frontend Display
+The final response is sent to the user interface for display.
 ### Why MCP?
 
 The MCP Gateway pattern provides:
