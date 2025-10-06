@@ -21,6 +21,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (user) {
+      console.log(user);
       api.videos
         .getUserVideos(user.userId)
         .then((res) => {
