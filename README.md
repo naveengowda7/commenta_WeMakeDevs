@@ -130,13 +130,13 @@ Commenta follows a **microservices architecture** with 6 independent services:
 The **MCP (Model Context Protocol) Gateway** is the bridge between the AI Agent and your database. Here's the detailed flow:
 
 ### Step-by-Step MCP Flow
-1. User Interaction
+1. User Interaction:  
 The user types: "Show me the most controversial comments"
 
-2. AI Agent Receives the Query
+2. AI Agent Receives the Query:  
 The AI Agent (Port 4003) receives the request.
 
-3. Cerebras AI Tool Invocation
+3. Cerebras AI Tool Invocation:  
 The AI Agent sends the query to Cerebras AI, which responds with:
 
 ```
