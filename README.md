@@ -302,9 +302,24 @@ The MCP Gateway pattern provides:
 - Cerebras API key
 
 ### 1. Clone Repository
+
+Frontend
 ```bash
-git clone https://github.com/your-repo/commenta.git
-cd commenta
+git clone https://github.com/naveengowda7/commenta_WeMakeDevs.git
+cd commenta_WeMakeDevs
+```
+Backend
+```bash
+git clone https://github.com/naveengowda7/commenta_backend.git
+cd commenta_backend
+```
+
+Setup Frontend
+```
+VITE_API_BASE=http://localhost:5000
+VITE_AUTH_URL=http://localhost:4000
+VITE_FETCH_URL=http://localhost:4001
+VITE_AI_AGENT_URL=http://localhost:4003
 ```
 
 2. Setup Backend Services
@@ -371,7 +386,6 @@ cd commenta-mcp && npm install && npm start &
 ```
 4. Setup Frontend
 ```
-cd commenta-frontend
 npm install
 npm run dev
 ```
@@ -446,7 +460,7 @@ This project was built by:
 Naveen Gowda MY - Full Stack Development, Architecture
 Sachidanada Shivade - Backend Services, AI Integration
 Manoj K - Frontend Development, UI/UX
-Dharshan - DevOps, Database Design
+Dharshan - Backend, Database Design
 
 
 📝 Note on Repository
@@ -464,19 +478,10 @@ If you'd like access to the original development repositories or have any questi
 🚀 Future Enhancements
 
  Real-time comment reply feature
- Multi-language sentiment analysis
  Automated response suggestions
- Trend detection over time
- Competitor analysis
- Mobile app (React Native)
- Chrome extension
  Advanced analytics dashboard
  Export reports (PDF/CSV)
- Team collaboration features
 
-
-📄 License
-MIT License - See LICENSE file for details
 
 🤝 Contributing
 This project is currently maintained for academic/showcase purposes. If you'd like to contribute or have suggestions, please reach out to the team members.
@@ -484,9 +489,7 @@ This project is currently maintained for academic/showcase purposes. If you'd li
 📧 Contact
 For questions or support:
 
-Naveen Gowda MY - naveen@example.com
-Project Repository - GitHub
-
+Naveen Gowda MY - info.naveengowda@gmail.com
 
 Built with ❤️ by Team Commenta
 
