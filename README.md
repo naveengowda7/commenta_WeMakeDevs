@@ -191,12 +191,10 @@ The MCP Gateway pattern provides:
 - **Flexibility** - Easy to add new tools without changing AI code
 - **Scalability** - MCP Gateway can be scaled independently
 
----
-
 ## 🔄 Complete Data Flow Example
 
 ### Example: User Analyzes a Video
-                                                  ```
+                                                ```
                                                   User logs in via OAuth
                                                   Frontend → Auth Service → YouTube API
                                                   
@@ -263,8 +261,7 @@ The MCP Gateway pattern provides:
                                                               ↓
                                                   
                                                   User sees: "Most viewers love it! 75% positive sentiment..."
-                                                  ```
----
+                                                ```
 
 ## 🛠️ Technology Stack
 
