@@ -199,18 +199,22 @@ The MCP Gateway pattern provides:
 ```
 User logs in via OAuth
 Frontend → Auth Service → YouTube API
-↓ (JWT token returned)
+
+            ↓ (JWT token returned)
+
 User enters video ID "dQw4w9WgXcQ"
 Frontend → Comment Fetcher Service
-↓
+
+            ↓
+
 Comment Fetcher starts fetching
 
 Calls YouTube API (100 comments/request)
 Saves to DB via DB Ops Service
 Adds to BullMQ queue
 Broadcasts progress via WebSocket
-↓
 
+            ↓
 
 AI Analytics picks up from queue
 
@@ -219,35 +223,45 @@ Sends to Cerebras AI for analysis
 Gets back sentiment + flags
 Queues for DB storage
 Broadcasts progress via WebSocket
-↓
 
+            ↓  
 
 DB Ops Worker saves analysis
 
 Stores sentiment results
 Updates video summary
 Marks job as complete
-↓
 
+            ↓
 
 Email notification sent
 
 AI Analytics sends email via Gmail
 User receives analysis completion notice
-↓
 
+            ↓
 
 User asks AI: "What are people saying?"
 Frontend → AI Agent → Cerebras AI
-↓
+
+            ↓
+
 AI decides to call tools
-↓
+
+            ↓
+
 AI Agent → MCP Gateway → DB Ops → PostgreSQL
-↓
+
+            ↓
+
 Data flows back
-↓
+
+            ↓
+
 Cerebras AI generates friendly response
-↓
+
+            ↓
+
 User sees: "Most viewers love it! 75% positive sentiment..."
 ```
 ---
