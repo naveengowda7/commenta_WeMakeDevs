@@ -373,7 +373,7 @@ PORT=5000
 PORT=5001
 DB_OPS_URL=http://localhost:5000
 ```
-3. Install Dependencies & Start Services
+### 3. Install Dependencies & Start Services
 
    # Install and start each service
 ```
@@ -384,7 +384,7 @@ cd commenta-db-ops && npm install && npx prisma generate && npm start &
 cd commenta-ai-agent && npm install && npm start &
 cd commenta-mcp && npm install && npm start &
 ```
-4. Setup Frontend
+### 4. Setup Frontend
 ```
 npm install
 npm run dev
