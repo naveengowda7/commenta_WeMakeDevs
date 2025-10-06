@@ -152,7 +152,7 @@ The AI Agent sends the query to Cerebras AI, which responds with:
   }]
 }
 ```
-4. MCP Gateway Request
+4. MCP Gateway Request:   
 The AI Agent calls the MCP Gateway (Port 5001) with:
 ```
 http
@@ -162,28 +162,29 @@ Body: {
   "type": "controversial"
 }
 ```
-5. Database Query
+5. Database Query:   
 MCP Gateway forwards the request to DB Ops Service (Port 5000):
 ```
 http
 GET /analysis/video/abc123
 ```
-6. Data Retrieval & Filtering
+6. Data Retrieval & Filtering:   
 DB Ops Service fetches analysis data from PostgreSQL.
 
 MCP Gateway filters for controversial comments.
 
-7. Return to AI Agent
+7. Return to AI Agent:   
 MCP Gateway sends the filtered results back to the AI Agent.
 
-8. Cerebras AI Formats Response
+8. Cerebras AI Formats Response:   
 Cerebras AI generates a human-friendly message:
 
-9. Frontend Display
+9. Frontend Display:   
 The final response is sent to the user interface for display.
+
 ### Why MCP?
 
-The MCP Gateway pattern provides:
+The MCP Gateway pattern provides:   
 - **Separation of Concerns** - AI logic separated from data access
 - **Reusability** - Same tools can be used by multiple AI agents
 - **Security** - Database queries controlled and validated
